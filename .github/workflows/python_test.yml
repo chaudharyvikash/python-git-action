@@ -1,0 +1,12 @@
+name: python-code
+on: 
+  workflow_dispatch:
+    #push
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: run python code
+        run: python .github/decorator.py
