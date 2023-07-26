@@ -19,5 +19,5 @@ p=Bigfix('kev')
 p.showProject()
 
 p2=Patch('patch')
-p2.currentProject()
-p2.showProject()
+# p2.currentProject()
+# p2.showProject()
