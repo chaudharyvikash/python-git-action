@@ -1,0 +1,21 @@
+name: Push File
+
+on: push
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file
+      uses: chaudharyvikash/python-git-action@main
+      env:
+        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      with:
+        source_file: 'sysinfo.py'
+        destination_repo: 'chaudharyvikash/Github-Action-Demo'
+        destination_folder: 'test'
+        user_name: 'chaudharyvikash'
+        commit_message: 'A custom message for the commit'
